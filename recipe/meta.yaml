@@ -1,5 +1,5 @@
 {% set name = "flask-mqtt" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/stlehmann/Flask-MQTT/releases/download/{{ version }}/Flask-MQTT-{{ version }}.tar.gz
-  sha256: d196c4a7a1fc37a4364e8fe46b3670cc656a851c5b63d69e2836c80e03da88f1
+  sha256: 6d37c5ebb8e180f6aaa409d776a04f6dcf2fcd61cc22d67341bc146db36641e0
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
